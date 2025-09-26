@@ -7,6 +7,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 
     <style>
+        /* Estilos básicos para centralizar o conteúdo e preencher o ecrã */
         body {
             display: flex;
             flex-direction: column;
@@ -14,32 +15,61 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            background-color: #f8f8f8; /* Cor de fundo suave */
             text-align: center;
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
         }
-        /* O botão deve ser claro para o utilizador */
+        
+        /* Estilo para o botão de AR - Torna-o claro e clicável */
         .ar-button {
             padding: 15px 30px;
-            background-color: #4CAF50;
+            background-color: #007bff; /* Azul vivo */
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-size: 1.2em;
             margin-top: 20px;
             cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        
+        /* Efeito ao passar o rato (em desktop) ou ao tocar (em mobile) */
+        .ar-button:hover {
+            background-color: #0056b3;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Stitch AR</h1>
-    <p>Toque no botão para ver o Stitch em Realidade Aumentada!</p>
+    <h1>O Stitch Ganha Vida!</h1>
+    <p>Toque no botão para ver a animação em tempo real na sua sala ou secretária.</p>
 
     <a href="stitch.usdz" rel="ar">
         <div class="ar-button">
-            Ver em Realidade Aumentada
+            Ver em Realidade Aumentada (AR)
         </div>
     </a>
+
+    <model-viewer 
+        src="stitch.glb" 
+        ios-src="stitch.usdz" 
+        alt="O meu Stitch em Realidade Aumentada" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls 
+        touch-action="pan"
+        style="display:none;" /* Esconde o visualizador 3D na página */
+    ></model-viewer>
 
 </body>
 </html>
