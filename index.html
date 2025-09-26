@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Stitch em Realidade Aumentada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        /* O botão deve ser claro para o utilizador */
+        .ar-button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Stitch AR</h1>
+    <p>Toque no botão para ver o Stitch em Realidade Aumentada!</p>
+
+    <a href="stitch.usdz" rel="ar">
+        <div class="ar-button">
+            Ver em Realidade Aumentada
+        </div>
+    </a>
+
+</body>
+</html>
